@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<title>Test game like</title>
+<meta name = "viewport" content = "user-scalable=no, width=device-width">
+
+<style>
+body {
+    margin:0;
+}
+.sjs {
+    background:#f1f4fe;
+}
+</style>
+<script src="sprite.js"></script>
+<script src="lib/collision.js"></script>
+<script src="jquery-1.5.2.js"></script>
+<script src="coop.js"></script>
+<link rel="stylesheet" href="coop.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+</head>
+<body>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        $('#goBtn').click(function() {
+          jsCoop.run();
+          return false;
+        })
+      })
+    </script>
+<span id="debug"></span>	
+    
+</body>
+
+<form id="setup">
+  <h1>Cooperation Simulation Experiment</h1>
+  <pThis simulates a bunch of creatures seeking a food supply and returning food to a nest.</p>
+  
+  <p>When creatures encounter each other (i.e., collide) they have a probability of forming a group.</p>
+  
+  <p>Groups all return food to the same nest.</p>
+  
+  <p>I want to experiment with different kinds of utility functions for individual creatures, varying the balance between seeking group utility and individual utility</p>
+  <p>Max Number of Groups:<input id ="maxGroups" value="4" type="number"></p>
+  <p>Chance of Forming A Group Upon Collision:<input id="groupChance" value="0.1" type="number"></p>
+  <p>Number of Creatures:<input id="numCreatures" value="100" type="number"></p>
+  <p>Number of Food Pellets:<input id="numFood" value="1000" type="number"></p>  
+  <input type="button" value="Run" id="goBtn">
+</form>
+</html>

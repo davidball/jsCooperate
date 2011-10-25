@@ -1,0 +1,29 @@
+body {
+    font-family:"minion-pro-1", "minion-pro-2", Palatino, Georgia, "Times New Roman", serif;
+}
+.nest {
+    border: 1px solid #999;
+    height:200px;
+    width:200px;
+    position:absolute;
+    left:0px;
+}
+#food {
+    width:200px;
+    height:500px;
+    background-color:green;
+    position:absolute;
+    z-index:200;
+    opacity:0.2;
+}
+.pellet {
+    width:4px;
+    height:4px;
+    background-color:black;
+    margin:1px;
+    float:left;
+}
+#setup {
+    margin:auto;
+    width:500px;
+}
